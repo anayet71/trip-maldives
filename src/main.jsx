@@ -8,13 +8,22 @@ import {
 } from "react-router-dom";
 import Root from './components/Root';
 import AuthProvider from './provider/AuthProvider';
+import Register from './components/Register';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root></Root>,
+      children: [
+       {
+        path: '/register',
+        element: <Register></Register>
+      }
+ 
+      ]        
+    
 
-  },
+  }
 
 ])
 
